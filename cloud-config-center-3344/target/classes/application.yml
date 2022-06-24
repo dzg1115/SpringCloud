@@ -1,0 +1,44 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dzg1115/springcloud-config.git #GitHub上面的git仓库名字
+          #搜索目录
+          search-paths:
+            - springcloud-config
+        #读取分支
+      label: master
+    #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+#注册进eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka     #注册进eureka集群
+  instance:
+    instance-id: config-center3344  #显示实例名称
+    prefer-ip-address: true   #访问路径就可以显示ip
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+#rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+

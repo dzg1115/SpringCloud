@@ -1,0 +1,9 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-providerzk-payment
+  cloud:
+    zookeeper:
+      connect-string: 192.168.215.140:2181,192.168.215.141:2181,192.168.215.142:2181
