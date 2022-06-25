@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db2019" uuid="0ba4963f-0080-4a99-86fc-8f481ee5e755">
+    <data-source source="LOCAL" name="seata_order" uuid="193e497a-4349-45fc-a1f7-a8d6eaf57215">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>db2019</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/seata_order</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="seata_account" uuid="340534a5-5a0f-49e5-ad3e-786ebfb46896">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/seata_account</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="seata_storage" uuid="ef84ec37-ec4a-4375-a47b-2d9517a6c2fa">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/seata_storage</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="db2019" uuid="9bbcdea0-3f3f-4d89-a177-5824b17a1d04">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/db2019</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
