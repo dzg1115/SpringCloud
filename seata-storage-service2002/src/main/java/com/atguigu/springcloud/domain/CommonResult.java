@@ -5,21 +5,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Author dongzhigang
- * @Date 2022/6/25 21:05
- * @Version 1.0
- * @Description
+ * Created by macro on 2019/8/29.
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommonResult<T>{
-
+public class CommonResult<T>
+{
     private Integer code;
     private String  message;
     private T       data;
 
-    public CommonResult(Integer code, String message){
+    public CommonResult(Integer code, String message)
+    {
         this(code,message,null);
     }
 }

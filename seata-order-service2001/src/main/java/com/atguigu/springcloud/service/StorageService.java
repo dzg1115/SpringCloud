@@ -1,5 +1,6 @@
 package com.atguigu.springcloud.service;
 
+
 import com.atguigu.springcloud.domain.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,6 @@ public interface StorageService {
 
     //减库存
     @PostMapping("/storage/decrease")
-    CommonResult decrease(@RequestParam("productId") Long productId,@RequestParam("count") Integer count);
+    CommonResult decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count);
 
 }

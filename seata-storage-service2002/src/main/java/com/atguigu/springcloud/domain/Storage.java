@@ -2,12 +2,6 @@ package com.atguigu.springcloud.domain;
 
 import lombok.Data;
 
-/**
- * @Author dongzhigang
- * @Date 2022/6/25 21:06
- * @Version 1.0
- * @Description
- */
 @Data
 public class Storage {
 

@@ -12,9 +12,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Version 1.0
  * @Description
  */
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableDiscoveryClient
 @EnableFeignClients
+@EnableDiscoveryClient
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//取消数据源的自动创建
 public class SeataAccountMainApp2003 {
 
     public static void main(String[] args) {

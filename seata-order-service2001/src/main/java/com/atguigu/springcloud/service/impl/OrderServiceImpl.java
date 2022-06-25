@@ -5,6 +5,7 @@ import com.atguigu.springcloud.domain.Order;
 import com.atguigu.springcloud.service.AccountService;
 import com.atguigu.springcloud.service.OrderService;
 import com.atguigu.springcloud.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,7 @@ public class OrderServiceImpl implements OrderService {
 
     //创建订单（下订单->减库存->减余额->改状态） 分布式事务
     @Override
+    @GlobalTransactional(name = "fsp-create-order",rollbackFor = Exception.class) //分布式，全局事务控制
     public void create(Order order) {
 
         //1、下订单
